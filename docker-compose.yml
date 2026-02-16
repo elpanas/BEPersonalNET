@@ -1,0 +1,24 @@
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver
+    environment:
+      - SA_PASSWORD=Pana1983
+      - ACCEPT_EULA=Y
+    ports:
+      - "1433:1433"
+    volumes:
+      - sql_data:/var/opt/mssql
+
+  backend:
+    build: .
+    container_name: web-service
+    depends_on:
+      - sqlserver
+    env_file:
+      - .env
+    ports:
+      - "5000:8080"
+
+volumes:
+  sql_data:
