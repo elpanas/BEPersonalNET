@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace BEPersonal.Controllers
 {
     [ApiController]
-    [Route("api/message")]
+    [Route("api/[controller]")]
     [Produces("application/json")]
     public class MessageController : ControllerBase
     {

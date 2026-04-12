@@ -4,7 +4,6 @@ using BEPersonal.DTOs.In;
 using BEPersonal.DTOs.Out;
 using BEPersonal.Entities;
 using Microsoft.EntityFrameworkCore;
-using System.Runtime.CompilerServices;
 
 namespace BEPersonal.Services
 {
